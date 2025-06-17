@@ -1,6 +1,7 @@
 
 import { Search, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -9,27 +10,44 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-blue-600">EstateHub</h1>
+            <Link to="/" className="text-2xl font-bold text-blue-600">
+              EstateHub
+            </Link>
           </div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="#" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <Link 
+                to="/buy" 
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
                 Buy
-              </a>
-              <a href="#" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              </Link>
+              <Link 
+                to="/sell" 
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
                 Sell
-              </a>
-              <a href="#" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              </Link>
+              <Link 
+                to="/rent" 
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
                 Rent
-              </a>
-              <a href="#" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              </Link>
+              <Link 
+                to="/agents" 
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
                 Agents
-              </a>
-              <a href="#" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              </Link>
+              <Link 
+                to="/about" 
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
                 About
-              </a>
+              </Link>
             </div>
           </div>
           
